@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreaCouture | Tarifs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/tarifs.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo"><a href="index.html"><span>CreaCouture</span></a></div>
+      <div class="burger" id="burger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="navbar-list" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+        <li><a href="#">Offres de cours</a></li>
+        <li><a href="tarifs.html" class="active">Tarifs</a></li>
+        <li><a href="#">Témoignages & avis</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero small-hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Nos Tarifs</h1>
+      <p>Des formules adaptées à vos besoins et à votre rythme</p>
+    </div>
+  </section>
+
+  <!-- TARIFS -->
+  <section class="pricing">
+    <div class="container">
+      <h2>Formules disponibles</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Session unique</h3>
+          <p class="price">35 €</p>
+          <p>Une séance d’initiation ou perfectionnement, idéale pour découvrir la couture.</p>
+        </div>
+        <div class="pricing-card highlight">
+          <h3>Forfait 5 cours</h3>
+          <p class="price">160 €</p>
+          <p>Un pack avantageux pour progresser rapidement en pratiquant régulièrement.</p>
+        </div>
+        <div class="pricing-card">
+          <h3>Abonnement mensuel</h3>
+          <p class="price">110 €/mois</p>
+          <p>Un accès à 4 cours par mois avec suivi personnalisé et projets guidés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIEMENTS -->
+  <section class="payment">
+    <div class="container">
+      <h2>Moyens de paiement acceptés</h2>
+      <ul class="payment-list">
+        <li>💳 Carte bancaire</li>
+        <li>💶 Espèces</li>
+        <li>🏦 Virement bancaire</li>
+        <li>📄 Chèque</li>
+        <li>🅿️ PayPal</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- OFFRE SPECIALE -->
+  <section class="special-offer">
+    <div class="container">
+      <h2>Offre spéciale</h2>
+      <p><strong>-15% sur votre première session</strong> (valable pour toute première inscription)</p>
+    </div>
+  </section>
+
+  <!-- CARTE CADEAU -->
+  <section class="giftcard">
+    <div class="container">
+      <h2>Carte cadeau</h2>
+      <p>Offrez un cours de couture à vos proches ! Une idée originale pour partager la passion de la création.</p>
+      <button id="checkout-button" class="hero-btn">Acheter une carte cadeau</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p>© 2025 CreaCouture — Tous droits réservés</p>
+      <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+  <script src="js/tarifs.js"></script>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    const stripe = Stripe("pk_live_51Nev8mAGYeUDmVwDqZTc4A8oEaNkEGDMAonp6EAmxzUGluphF3YFFu5t7eL1Ov9ZsIpzXgm6u93zhIGpyW1bjakB00BRo9tUr1");
+
+    document.getElementById("checkout-button").addEventListener("click", async () => {
+      const res = await fetch("http://localhost:3000/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" }
+      });
+
+      const session = await res.json();
+
+      const result = await stripe.redirectToCheckout({ sessionId: session.id });
+      if (result.error) {
+        alert(result.error.message);
+      }
+    });
+  </script>
+
+</body>
+</html>
