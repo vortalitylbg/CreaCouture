@@ -129,6 +129,14 @@ a {
   transform: scale(1.05);
 }
 
+/* --- HERO plus petit pour les pages secondaires --- */
+.small-hero {
+  height: 50vh;
+}
+.small-hero .hero-content h1 {
+  font-size: 2.5rem;
+}
+
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 992px) {
   .navbar {
