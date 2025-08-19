@@ -1,84 +1,106 @@
-/* --- PRICING --- */
-.pricing {
+/* --- Sections Tarifs --- */
+.pricing-section {
   padding: 4em 2em;
   text-align: center;
 }
-.pricing h2 {
-  color: #A09878;
+.pricing-section h2 {
+  font-size: 2rem;
   margin-bottom: 2em;
+  color: #A09878;
 }
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2em;
 }
+
 .pricing-card {
   background: #fff;
+  border-radius: 12px;
   padding: 2em;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
 }
 .pricing-card:hover {
   transform: translateY(-5px);
 }
 .pricing-card h3 {
-  margin-bottom: 1em;
+  font-size: 1.4rem;
+  margin-bottom: 0.5em;
   color: #BF5B5E;
 }
-.price {
+.pricing-card .price {
   font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 1em;
+  margin: 0.5em 0 1em;
+  color: #2D2D2D;
 }
-.highlight {
+.pricing-card p {
+  font-size: 1rem;
+  color: #555;
+}
+.pricing-card.highlight {
   border: 2px solid #BF5B5E;
-  transform: scale(1.05);
 }
 
-/* --- PAYMENT --- */
-.payment {
-  padding: 3em 2em;
+/* --- Modes de paiement --- */
+.payment-section {
+  padding: 4em 2em;
   text-align: center;
 }
-.payment h2 {
+.payment-section h2 {
+  font-size: 2rem;
   margin-bottom: 1em;
   color: #A09878;
 }
 .payment-list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5em;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+.payment-list li {
   font-size: 1.1rem;
+  margin: 0.7em 0;
+  padding-left: 1.5em;
+  position: relative;
+}
+.payment-list li::before {
+  content: "✔";
+  color: rgb(18, 135, 7);
+  position: absolute;
+  left: 0;
 }
 
-/* --- SPECIAL OFFER --- */
-.special-offer {
-  background: #BF5B5E;
-  color: white;
-  padding: 3em 2em;
-  text-align: center;
-}
-.special-offer h2 {
-  margin-bottom: 1em;
-}
-.special-offer p {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-/* --- GIFTCARD --- */
-.giftcard {
+/* --- Offres spéciales --- */
+.offers-section {
   padding: 4em 2em;
   text-align: center;
 }
-.giftcard h2 {
+.offers-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2em;
   color: #A09878;
-  margin-bottom: 1em;
 }
-.giftcard p {
-  max-width: 600px;
-  margin: 0 auto 2em;
+.offers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2em;
+}
+.offer {
+  background: #f9f9f9;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.offer h3 {
+  font-size: 1.3rem;
+  color: #BF5B5E;
+  margin-bottom: 0.5em;
+}
+.offer p {
+  font-size: 1rem;
+  color: #444;
 }
