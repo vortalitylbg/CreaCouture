@@ -30,63 +30,61 @@
   <section class="hero small-hero">
     <div class="overlay"></div>
     <div class="hero-content">
-      <h1>Nos Tarifs</h1>
-      <p>Des formules adaptées à vos besoins et à votre rythme</p>
+      <h1>Tarifs</h1>
+      <p>Découvrez nos formules et options de paiement</p>
     </div>
   </section>
 
-  <!-- TARIFS -->
-  <section class="pricing">
+  <!-- SECTION TARIFS -->
+  <section class="pricing-section">
     <div class="container">
-      <h2>Formules disponibles</h2>
+      <h2>Nos formules</h2>
       <div class="pricing-grid">
         <div class="pricing-card">
           <h3>Session unique</h3>
-          <p class="price">35 €</p>
-          <p>Une séance d’initiation ou perfectionnement, idéale pour découvrir la couture.</p>
+          <p class="price">35€</p>
+          <p>Un cours de 2h pour découvrir la couture.</p>
         </div>
         <div class="pricing-card highlight">
           <h3>Forfait 5 cours</h3>
-          <p class="price">160 €</p>
-          <p>Un pack avantageux pour progresser rapidement en pratiquant régulièrement.</p>
+          <p class="price">160€</p>
+          <p>Un pack avantageux pour progresser à votre rythme.</p>
         </div>
         <div class="pricing-card">
           <h3>Abonnement mensuel</h3>
-          <p class="price">110 €/mois</p>
-          <p>Un accès à 4 cours par mois avec suivi personnalisé et projets guidés.</p>
+          <p class="price">120€/mois</p>
+          <p>4 cours par mois, idéal pour un suivi régulier.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PAIEMENTS -->
-  <section class="payment">
+  <!-- SECTION PAIEMENT -->
+  <section class="payment-section alt-bg">
     <div class="container">
-      <h2>Moyens de paiement acceptés</h2>
+      <h2>Modes de paiement</h2>
       <ul class="payment-list">
-        <li>💳 Carte bancaire</li>
-        <li>💶 Espèces</li>
-        <li>🏦 Virement bancaire</li>
-        <li>📄 Chèque</li>
-        <li>🅿️ PayPal</li>
+        <li>Carte bancaire (en présentiel)</li>
+        <li>Chèque</li>
+        <li>Espèces</li>
       </ul>
     </div>
   </section>
 
-  <!-- OFFRE SPECIALE -->
-  <section class="special-offer">
+  <!-- SECTION OFFRES -->
+  <section class="offers-section">
     <div class="container">
-      <h2>Offre spéciale</h2>
-      <p><strong>-15% sur votre première session</strong> (valable pour toute première inscription)</p>
-    </div>
-  </section>
-
-  <!-- CARTE CADEAU -->
-  <section class="giftcard">
-    <div class="container">
-      <h2>Carte cadeau</h2>
-      <p>Offrez un cours de couture à vos proches ! Une idée originale pour partager la passion de la création.</p>
-      <button id="checkout-button" class="hero-btn">Acheter une carte cadeau</button>
+      <h2>Offres spéciales</h2>
+      <div class="offers">
+        <div class="offer">
+          <h3>-15% sur la première session</h3>
+          <p>Profitez d’une réduction sur votre premier cours de couture.</p>
+        </div>
+        <div class="offer">
+          <h3>Carte cadeau</h3>
+          <p>Offrez un ou plusieurs cours de couture à vos proches.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -100,14 +98,5 @@
 
   <!-- SCRIPT -->
   <script src="script.js"></script>
-  <script src="js/tarifs.js"></script>
-
-  <script src="https://js.stripe.com/v3/"></script>
-  <script>
-    document.getElementById("checkout-button").addEventListener("click", async () => {
-      alert('Je ne propose pas encore de paiement en ligne dans mes services');
-    });
-  </script>
-
 </body>
 </html>
