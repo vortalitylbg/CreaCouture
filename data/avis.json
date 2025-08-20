@@ -1,0 +1,14 @@
+[
+  {
+    "nom": "Marie",
+    "texte": "Super cours ! J'ai appris à coudre ma première jupe.",
+    "note": 5,
+    "date": "2025-08-20"
+  },
+  {
+    "nom": "Julien",
+    "texte": "Très bon suivi et conseils.",
+    "note": 4,
+    "date": "2025-08-18"
+  }
+]
