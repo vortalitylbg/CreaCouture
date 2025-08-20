@@ -1,0 +1,84 @@
+.reviews-section {
+  padding: 4em 2em;
+  text-align: center;
+}
+.reviews-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2em;
+  color: #A09878;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+  margin-bottom: 3em;
+}
+.review-card {
+  background: #fff;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: left;
+}
+.review-card h3 {
+  font-size: 1.2rem;
+  color: #BF5B5E;
+  margin-bottom: 0.5em;
+}
+.review-card .stars {
+  color: #FFD700;
+  margin-bottom: 1em;
+}
+.review-card p {
+  font-size: 1rem;
+  color: #555;
+}
+.review-card .date {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 0.5em;
+}
+.review-form {
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.review-form input, .review-form textarea {
+  padding: 0.8em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.review-form button {
+  padding: 1em;
+  background-color: #BF5B5E;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.review-form button:hover {
+  background-color: #8f3f42;
+}
+.stars input {
+  display: none;
+}
+.stars label {
+  font-size: 1.5rem;
+  color: #ccc;
+  cursor: pointer;
+}
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: #FFD700;
+}
+.form-message {
+  font-size: 0.9rem;
+  color: green;
+}
