@@ -33,8 +33,8 @@
   position: relative;
 }
 .certifications li::before {
-  content: "✓";
-  color: #BF5B5E;
+  content: "✔";
+  color: #128707;
   position: absolute;
   left: 0;
 }

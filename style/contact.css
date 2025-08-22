@@ -1,0 +1,82 @@
+/* --- Section contact --- */
+.contact-section {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2em;
+  color: #A09878;
+}
+
+/* Formulaire */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  color: #2D2D2D;
+}
+
+input, textarea {
+  padding: 0.9em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #BF5B5E;
+  outline: none;
+}
+
+/* Bouton */
+.btn-submit {
+  align-self: flex-start;
+  padding: 0.9em 2em;
+  background-color: #BF5B5E;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #8f3f42;
+  transform: scale(1.05);
+}
+
+/* --- Infos pratiques --- */
+.info-section {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+  color: #A09878;
+}
+
+.info-section p {
+  font-size: 1.1rem;
+  margin: 0.5em 0;
+}

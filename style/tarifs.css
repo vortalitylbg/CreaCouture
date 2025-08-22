@@ -19,11 +19,14 @@
   background: #fff;
   border-radius: 12px;
   padding: 2em;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+  box-shadow: 0 5px 12px #5752406c;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 .pricing-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 12px #57524093;
+  transition: all 0.2s ease;
 }
 .pricing-card h3 {
   font-size: 1.4rem;
@@ -69,7 +72,7 @@
 }
 .payment-list li::before {
   content: "✔";
-  color: rgb(18, 135, 7);
+  color: #128707;
   position: absolute;
   left: 0;
 }

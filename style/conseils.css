@@ -1,0 +1,65 @@
+/* --- Section Conseils --- */
+.conseils-section {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.conseils-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2em;
+  color: #A09878;
+}
+
+.conseils-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2em;
+}
+
+.conseil-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 5px 12px #57524034;
+}
+
+.conseil-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px #5752406c;
+}
+
+.conseil-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.conseil-card h3 {
+  font-size: 1.3rem;
+  margin: 1em;
+  color: #BF5B5E;
+}
+
+.conseil-card p {
+  font-size: 1rem;
+  margin: 0 1em 1em;
+  color: #555;
+}
+
+.conseil-card .btn {
+  display: inline-block;
+  margin: 0 1em 1.5em;
+  background-color: #BF5B5E;
+  color: white;
+  padding: 0.6em 1.4em;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.conseil-card .btn:hover {
+  background-color: #8f3f42;
+}
