@@ -57,6 +57,12 @@ a {
   color: #A09878;
 }
 
+.active {
+  color: #888166;
+  font-weight: 600;
+}
+
+
 /* Burger pour mobile */
 .burger {
   display: none;
@@ -268,3 +274,5 @@ body {
     display: flex;
   }
 }
+
+
